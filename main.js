@@ -1,3 +1,4 @@
+// TASK 1
 // Define an array called "bicycle" that contains three objects representing bicycles.
 const bicycle = [
     { Type: "Run", Name: "Pantani", Weight: "4kg" },
@@ -18,10 +19,10 @@ const bicycle = [
   const { Type, Name, Weight } = bicycle[0];
   
 
-  console.log(`The bike with the lowest weight is ${Name} with a weight of ${Weight}.`);
+console.log(`The bike with the lowest weight is ${Name} with a weight of ${Weight}.`);
   
   
-  
+// TASK 2 
 // Define an array called "team" that contains three objects representing football teams.
 const team = [
     { Name: "Milan", Goal: Math.floor(Math.random() * 10), admonitions: Math.floor(Math.random() * 5) },
@@ -38,8 +39,27 @@ const team = [
   */
   const newTeam = team.map(({ Name, admonitions }) => ({ Name, admonitions }));
   
-  // Print the "newTeam" array to the console.
-  console.log(newTeam);
+// Print the "newTeam" array to the console.
+console.log(newTeam);
+
+// TASK 3
+// Define a function that accepts an array and two numbers, a and b.
+function getElementsBetweenIndices(array, a, b) {
+    // Use the `filter` method to create a new array containing only the elements whose indices are between a and b (inclusive).
+    return array.filter((element, index) => index >= a && index <= b);
+};
+  
+  // Define an array to use as input.
+  const myArray = [0, 1, 2, 3, 4, 5];
+  
+  // Call the `getElementsBetweenIndices` function with the myArray array and the values 2 and 4.
+  // This will create a new array containing only the elements with indices between 2 and 4 (inclusive).
+  const resultArray = getElementsBetweenIndices(myArray, 2, 4);
+  
+// Print the resulting array to the console.
+console.log(resultArray);
+  
+
   
 
   
